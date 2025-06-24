@@ -107,21 +107,32 @@
   </nav>
   <div class="container">
     <aside>
-      <a href="#">Our Mission / Наша Місія</a>
+      <a href="#" onclick="loadPage('mission.html')">Our Mission / Наша Місія</a>
       <a href="#">Our Friends / Наші Друзі</a>
       <a href="#">Join Us / Долучитися</a>
       <a href="#">Shop / Крамничка</a>
     </aside>
-    <main>
-      <div class="main-header">Welcome to CherryPepper!</div>
-      <p>This is the main content area. Here you'll see updates, projects, and more.</p>
-    </main>
+  <main id="main-content">
+    <div class="main-header">Welcome to CherryPepper!</div>
+    <p>This is the main content area. Here you'll see updates, projects, and more.</p>
+  </main>
   </div>
 
   <script>
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
     }
+      function loadPage(url) {
+    fetch(url)
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('main-content').innerHTML = data;
+      })
+      .catch(error => {
+        document.getElementById('main-content').innerHTML = '<p>Error loading page.</p>';
+        console.error(error);
+      });
+  }
   </script>
 </body>
 </html>
