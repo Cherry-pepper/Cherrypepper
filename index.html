@@ -1,0 +1,127 @@
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CherryPepper / Вишня з Перцем</title>
+  <style>
+    :root {
+      --cherry-red: #B23A48;
+      --pepper-green: #4E5E45;
+      --background-peach: #FCEBEA;
+      --text-black: #2E2E2E;
+      --blush-pink: #F8D7DA;
+      --soft-ivory: #FFF9F7;
+      --deep-wine: #7A1E2E;
+      --olive-brown: #6C705D;
+
+      --background-dark: #2B2B2B;
+      --text-light: #F4F4F4;
+      --navy: #1A1A40;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--soft-ivory);
+      color: var(--text-black);
+    }
+
+    body.dark-mode {
+      background-color: var(--background-dark);
+      color: var(--text-light);
+    }
+
+    header {
+      background-color: var(--cherry-red);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav.top-menu {
+      display: flex;
+      justify-content: center;
+      background-color: var(--pepper-green);
+      padding: 0.5rem;
+    }
+
+    nav.top-menu a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    aside {
+      width: 200px;
+      background-color: var(--blush-pink);
+      padding: 1rem;
+    }
+
+    aside a {
+      display: block;
+      color: var(--deep-wine);
+      text-decoration: none;
+      margin: 0.5rem 0;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 1rem;
+      border-left: 2px solid var(--pepper-green);
+    }
+
+    .main-header {
+      background-color: var(--navy);
+      color: white;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .dark-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: var(--olive-brown);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌙 / ☀️</button>
+  <header>
+    <h1>CherryPepper / Вишня з Перцем</h1>
+  </header>
+  <nav class="top-menu">
+    <a href="#">News / Новини</a>
+    <a href="#">Ukrainian Projects / Українські Проєкти</a>
+    <a href="#">English Projects / Англомовні Проєкти</a>
+    <a href="#">Future Plans / Майбутнє</a>
+  </nav>
+  <div class="container">
+    <aside>
+      <a href="#">Our Mission / Наша Місія</a>
+      <a href="#">Our Friends / Наші Друзі</a>
+      <a href="#">Join Us / Долучитися</a>
+      <a href="#">Shop / Крамничка</a>
+    </aside>
+    <main>
+      <div class="main-header">Welcome to CherryPepper!</div>
+      <p>This is the main content area. Here you'll see updates, projects, and more.</p>
+    </main>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
