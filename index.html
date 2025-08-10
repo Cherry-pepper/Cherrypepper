@@ -108,9 +108,6 @@
     <a href="#">English Projects / Англомовні Проєкти</a>
     <a href="#">Future Plans / Майбутнє</a>
   </nav>
-  <div id="breadcrumb" style="padding: 0.5rem; background-color: var(--blush-pink); border-bottom: 1px solid var(--pepper-green);">
-    <a href="home.html" target="main-frame">Main</a>
-  </div>
   <div class="container">
     <aside>
       <a href="#" onclick="loadPage('mission.html')">Our Mission / Наша Місія</a>
@@ -139,12 +136,5 @@
         console.error(error);
       });
   }
-    function updateBreadcrumb(parts) {
-  const container = document.getElementById('breadcrumb');
-  container.innerHTML = parts.map((p, i) => {
-    return `<a href="${p.url}" target="main-frame">${p.label}</a>`;
-  }).join(" &raquo; ");
-}
-  </script>
 </body>
 </html>
