@@ -139,6 +139,12 @@
         console.error(error);
       });
   }
+    function updateBreadcrumb(parts) {
+  const container = document.getElementById('breadcrumb');
+  container.innerHTML = parts.map((p, i) => {
+    return `<a href="${p.url}" target="main-frame">${p.label}</a>`;
+  }).join(" &raquo; ");
+}
   </script>
 </body>
 </html>
