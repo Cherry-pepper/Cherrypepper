@@ -144,14 +144,6 @@
         console.error(error);
       });
   }
-    document.getElementById('main-content').addEventListener('click', function(event) {
-  const link = event.target.closest('a');
-  if (link && link.getAttribute('href') && !link.getAttribute('href').startsWith('http')) {
-    event.preventDefault();
-    loadPage(link.getAttribute('href'));
-  }
-});
-
   </script>
 </body>
 </html>
