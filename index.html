@@ -75,6 +75,21 @@
       text-decoration: none;
       margin: 0.5rem 0;
     }
+    /* Mobile layout adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack vertically */
+  }
+
+  aside {
+    width: 100%; /* Full width menu */
+    order: 2; /* Move menu below main */
+  }
+
+  main {
+    order: 1; /* Keep main content on top */
+  }
+}
     
     a {
       color: #7A1E2E;
